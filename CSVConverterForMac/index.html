@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>CSVConverter For Mac</title>
+</head>
+<body>
+  <div>
+    <p>インポートするファイルを参照してください。</p>
+    <br>
+    <span id="importFilePath">選択されていません</span>
+    <br>
+      <button id="openFile" onclick="openFile()">
+        ファイルを参照
+      </button>
+  </div>
+  <div>
+    <p>出力先を参照してください。</p>
+    <br>
+    <span id="exportFilePath">選択されていません</span>
+    <br>
+      <button id="openFolder" onclick="openFolder()">
+        フォルダを参照
+      </button>
+  </div>  
+  <div>
+
+    <input type="text" id="KeyWordBox"/>
+    <br>
+    <input type="text" id="SearchWordBox"/>
+    <button onclick="Excute()">
+      実行
+    </button>
+  </div>
+  <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
