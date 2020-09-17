@@ -1,37 +1,60 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
   <title>CSVConverter For Mac</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/recet.css" />
+  <link rel="stylesheet" href="CSS/styles.css" />
 </head>
 <body>
-  <div>
-    <p>インポートするファイルを参照してください。</p>
-    <br>
-    <span id="importFilePath">選択されていません</span>
-    <br>
-      <button id="openFile" onclick="openFile()">
-        ファイルを参照
-      </button>
-  </div>
-  <div>
-    <p>出力先を参照してください。</p>
-    <br>
-    <span id="exportFilePath">選択されていません</span>
-    <br>
-      <button id="openFolder" onclick="openFolder()">
-        フォルダを参照
-      </button>
-  </div>  
-  <div>
-
-    <input type="text" id="KeyWordBox"/>
-    <br>
-    <input type="text" id="SearchWordBox"/>
-    <button onclick="Excute()">
-      実行
-    </button>
-  </div>
+    <div id="wrap">
+        <div id="header">
+            <h1 class="head_title">CSVConverter</h1>
+        </div>
+        <div id="container">
+            <section class="content_style">
+                <h2 class="sub_title">ファイル選択</h2>
+                <div class="content_box">
+                    <div>
+                        <p class="sub_text">変更するファイルを選択してください。</p>
+                        <div class="content_item">
+                            <p><span id="importFilePath">選択されていません</span></p>
+                            <button id="openFile" class="btn_base" onclick="openFile()">
+                                ファイルを参照
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="sub_text">変更したファイルの出力先フォルダを選択してください。</p>
+                        <div class="content_item">
+                            <p><span id="exportFilePath">選択されていません</span></p>
+                            <button id="openFolder" class="btn_base" onclick="openFolder()">
+                                フォルダを参照
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="content_style">
+                <h2 class="sub_title">キーワード編集</h2>
+                <div class="content_box">
+                    <p class="sub_text">キーワードは半角スペース区切りで入力してください。</p>
+                    <div>
+                        <p>検索ワード</p>
+                        <input type="text" id="SearchWordBox" class="box_style"/>
+                    </div>
+                    <div>
+                        <p>挿入ワード</p>
+                        <input type="text" id="KeyWordBox" class="box_style"/>
+                    </div>
+                    <button class="btn_run" onclick="Excute()">
+                        実行
+                    </button>
+                </div>
+            </section>
+        </div>
+    </div>
   <script type="text/javascript" src="index.js"></script>
 </body>
 </html>

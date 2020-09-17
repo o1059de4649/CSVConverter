@@ -1,0 +1,125 @@
+﻿
+/*カスタムプロパティ 色指定*/
+:root {
+    --main-bg-color: #f4f4f4;
+    --sub-color: #3c3c3c;
+    --style-color1: #0e7a7e;
+    --style-color2: #6decb9;
+}
+
+body {
+    background-color: var(--main-bg-color);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 16px;
+}
+
+input {
+    outline: none;
+}
+
+#header {
+    width: 100%;
+    height: 3.5rem;
+    background-color: var(--sub-color);
+    color: var(--main-bg-color);
+}
+
+.head_title {
+    margin-left: .8rem;
+    font-size: 2rem;
+    line-height: 3rem;
+}
+
+#container {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    line-height: 2rem;
+    color: var(--sub-color);
+}
+
+.content_style {
+    text-align: left;
+}
+
+
+    .content_style:last-child {
+        margin-left: 2rem;
+    }
+
+
+.content_box {
+    margin-left: 30px;
+}
+
+.sub_title {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.sub_text {
+    margin: 20px 0px;
+}
+
+.content_item {
+    display: flex;
+}
+
+    .content_item p {
+        font-size: .9rem;
+    }
+
+.box_style {
+    border: solid 2px var(--style-color1);
+    border-radius: 3px;
+}
+
+    .box_style:focus {
+        border: solid 2px var(--style-color2);
+        border-radius: 3px;
+    }
+
+/* * * * * * *
+ボタンスタイル
+ * * * * * * */
+
+button {
+    border: none; 
+    outline: none; 
+    background: transparent;
+}
+
+
+.btn_base {
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    color: var(--style-color1);
+    border: solid 2px var(--style-color1);
+    border-radius: 3px;
+    transition: .4s;
+    margin: 0px 20px;
+}
+
+    .btn_base:hover {
+        background: var(--style-color1);
+        color: white;
+    }
+
+.btn_run {
+    display: inline-block;
+    padding: 7px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #FFF;
+    background-image: linear-gradient(var(--style-color1) 40%, var(--style-color2) 100%);
+    transition: .4s;
+    margin: 20px 0px;
+    float: right;
+}
+
+    .btn_run:hover {
+        background-image: linear-gradient(var(--style-color1) 0%, var(--style-color2) 100%);
+    }
+
