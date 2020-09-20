@@ -3,8 +3,7 @@ const iconv = require('iconv-lite');
 const readline = require('readline');
 const { BrowserWindow, dialog } = require('electron').remote;
 
-
-//openFileƒ{ƒ^ƒ“‚ª‰Ÿ‚³‚ê‚½‚Æ‚«iƒtƒ@ƒCƒ‹–¼æ“¾‚Ü‚Åj
+//openFileï¿½{ï¿½^ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ê‚½ï¿½Æ‚ï¿½ï¿½iï¿½tï¿½@ï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½æ“¾ï¿½Ü‚Åj
 function openFile() {
     const win = BrowserWindow.getFocusedWindow();
     dialog.showOpenDialog(
@@ -20,8 +19,7 @@ function openFile() {
         },
         (fileNames) => {
             if (fileNames) {
-            readFile(fileNames[0]); //•¡”‘I‘ğ‚Ì‰Â”\«‚à‚ ‚é‚Ì‚Å”z—ñ‚Æ‚È‚éB
-                // alert(fileNames[0]);
+            readFile(fileNames[0]); //ï¿½ï¿½ï¿½ï¿½ï¿½Iï¿½ï¿½ï¿½Ì‰Â”\ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì‚Å”zï¿½ï¿½Æ‚È‚ï¿½B
             }
         }
     ).then(result => {
@@ -36,7 +34,7 @@ function openFolder()
 {
     dialog.showOpenDialog(null, {
         properties: ['openDirectory'],
-        title: 'ƒtƒHƒ‹ƒ_(’P“Æ‘I‘ğ)',
+        title: 'ï¿½tï¿½Hï¿½ï¿½ï¿½_(ï¿½Pï¿½Æ‘Iï¿½ï¿½)',
         defaultPath: '.'
     }, (folderNames) => {
         console.log(folderNames);
@@ -48,13 +46,13 @@ function openFolder()
       })
 }
 
-//ƒIƒuƒWƒFƒNƒg‚ğæ“¾
+//ï¿½Iï¿½uï¿½Wï¿½Fï¿½Nï¿½gï¿½ï¿½ï¿½æ“¾
 function getObj(id)
 {
  return document.getElementById(id)
 }
 
-//w’è‚µ‚½ƒtƒ@ƒCƒ‹‚ğ“Ç‚İ‚Ş
+//ï¿½wï¿½è‚µï¿½ï¿½ï¿½tï¿½@ï¿½Cï¿½ï¿½ï¿½ï¿½Ç‚İï¿½ï¿½ï¿½
 function readFile(importPath) {
     
     let data_array = GetStream(importPath);
@@ -76,7 +74,7 @@ function GetStream(importPath)
     return data_array;
 }
 
-//file‚ğ•Û‘¶iPath‚Æ“à—e‚ğw’èj
+//fileï¿½ï¿½Û‘ï¿½ï¿½iPathï¿½Æ“ï¿½ï¿½eï¿½ï¿½ï¿½wï¿½ï¿½j
 function writeFile(path, data) {
     fs.writeFile(path, data, (error) => {
         if (error != null) {
@@ -87,33 +85,33 @@ function writeFile(path, data) {
 }
 
 /// <summary>
-/// ƒtƒ@ƒCƒ‹®Œ`
+/// ï¿½tï¿½@ï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½`
 /// </summary>
 /// <param name="line"></param>
 /// <returns></returns>
 function Calculate(line,colums) 
 {
-    //‰Šú‰»
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     var DebugCount = 0;
-    //ƒJƒ‰ƒ€W‡‘Ì
+    //ï¿½Jï¿½ï¿½ï¿½ï¿½ï¿½Wï¿½ï¿½ï¿½ï¿½
     var colums_parts = colums.split(',');
     colums_parts.push("");
     colums_parts.push("");
-    //name‚Æ‚¢‚¤ƒJƒ‰ƒ€‚ğ‘ÎÛ‚Æ‚·‚é
+    //nameï¿½Æ‚ï¿½ï¿½ï¿½ï¿½Jï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÎÛ‚Æ‚ï¿½ï¿½ï¿½
     var _name = "name";
     var target_colum = "\""+_name+"\"";
 
-    //ƒJƒ‰ƒ€”
+    //ï¿½Jï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     var columNum = colums_parts.length; 
-    //‘Sƒf[ƒ^
+    //ï¿½Sï¿½fï¿½[ï¿½^
     var DataAllSet = line.split('"');
-    //ƒf[ƒ^®—
+    //ï¿½fï¿½[ï¿½^ï¿½ï¿½ï¿½ï¿½
     for (var i = 0; i < DataAllSet.length; i++) {
         if (DataAllSet[i] == "," || i == 0)DataAllSet.splice(i, 1);
     }
-    //§ŒÀ•¶š”
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     var maxChar = 75;
-    //ƒL[ƒ[ƒh
+    //ï¿½Lï¿½[ï¿½ï¿½ï¿½[ï¿½h
     var key_word = getObj("KeyWordBox").value;
     var dic_list = new Array();
     for (var i = 0; i < DataAllSet.length; i++)
@@ -137,6 +135,9 @@ function Calculate(line,colums)
         }
     }
 
+    //ï¿½fï¿½[ï¿½^ï¿½Pï¿½ï¿½
+    var dataList = new Array();
+
     dic_list.forEach(dic => {
         var targetData = "";
         dic.forEach(item => {
@@ -146,10 +147,8 @@ function Calculate(line,colums)
             }
         });
 
-
         var targetDataParts = targetData.split(' ');
-        targetDataParts[0] = targetDataParts[0].slice(1);
-        //‘ÎÛ•¶š‚ğŠÜ‚Ş¤•i–¼‚Ì‚İXV
+        //ï¿½ÎÛ•ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚Şï¿½ï¿½iï¿½ï¿½ï¿½Ì‚İXï¿½V
         if (getObj("SearchWordBox").value.length == 0 || SearchFlg(targetData))
         {
             targetData = targetDataParts.join(" ");
@@ -160,42 +159,40 @@ function Calculate(line,colums)
                 DebugCount++;
             }
 
-            //“š‚¦‘ã“ü
+            //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             dic.forEach(item => {
                 if (item.key == target_colum) {
-                    item[target_colum] = targetData;
+                    item["value"] = new String(targetData);
                 }
             });
         }
-    });
-
-    //ƒf[ƒ^’PˆÊ
-    var dataList = new Array();
-    //qƒf[ƒ^’PˆÊ
-    dic_list.forEach(dic => {
-        var dicItemList = new Array();
+        //TODO:ï¿½È‚ï¿½ï¿½ï¿½ï¿½Å‚ï¿½ï¿½È‚ï¿½
+        //ï¿½ï¿½ï¿½Êì¬
+        var itemList = new Array();
         dic.length--;
         dic.forEach(item => {
-            dicItemList.push('"'+item.value+'"');
+            itemList.push('"' + item.value + '"');
         });
-        dataList.push(dicItemList.join(','));
+        var str = new String(itemList.join(','));
+        dataList.push(str);
     });
+
     var strContent = dataList.join('\n').toString();
 
     var answer = strContent;
     return answer;
 }
 
-//’Tõ
+//ï¿½Tï¿½ï¿½
 function SearchFlg(targetData) 
 {
     var isSearch = false;
-    var search_parts = this.SearchWordBox.Text.Split(' ');
+    var search_parts = this.SearchWordBox.value.split(' ');
 
     var count = 0;
     search_parts.forEach(part => {
-        //‘S‚ÄŠÜ‚Ü‚ê‚½‚ç
-        if (targetData.Contains(part))
+        //ï¿½Sï¿½ÄŠÜ‚Ü‚ê‚½ï¿½ï¿½
+        if (targetData.includes(part))
         {
             count++;
         } 
@@ -204,13 +201,30 @@ function SearchFlg(targetData)
     return isSearch;
 }
 
-//Às
+//ï¿½ï¿½ï¿½s
 function Excute()
 {
     let inPath = getObj('importFilePath').innerText;
     let path_parts = inPath.split('\\');
     let file = path_parts[path_parts.length-1];
     let exPath = getObj('exportFilePath').innerText;
-    let _result = readFile(inPath);
-    fs.writeFileSync(exPath + '\\' + file, _result);
+
+    try {
+        //ï¿½æ‘œï¿½\ï¿½ï¿½
+        var img = getObj('loading');
+        img.classList.remove('loaded');
+        //ï¿½tï¿½@ï¿½Cï¿½ï¿½ï¿½ì¬
+        let _result = readFile(inPath);
+        fs.writeFileSync(exPath + '\\' + file, _result);
+        alert("å¤‰æ›ãŒå®Œäº†ã—ã¾ã—ãŸã€‚");
+        img.classList.add('loaded');
+    } catch{
+        alert("å¤‰æ›ã«å¤±æ•—ã—ã¾ã—ãŸã€‚");
+        img.classList.add('loaded');
+    }
 }
+
+window.onload = function() {
+    const spinner = document.getElementById('loading');
+    spinner.classList.add('loaded');
+  }
