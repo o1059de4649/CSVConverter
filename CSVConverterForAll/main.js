@@ -10,9 +10,8 @@ function createWindow() {
       width: 1000,
       height: 800,
       webPreferences: {
-        nodeIntegration: true,
-        enableRemoteModule: true,
-       },
+        nodeIntegration: true, // ココ
+      },
     });
     //ウインドウに表示する内容
     win.loadFile('index.html')

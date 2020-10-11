@@ -1,4 +1,6 @@
 const fs = require('fs');
+const iconv = require('iconv-lite');
+const readline = require('readline');
 const { BrowserWindow, dialog } = require('electron').remote;
 
 //openFile�{�^���������ꂽ�Ƃ��i�t�@�C�����擾�܂Łj

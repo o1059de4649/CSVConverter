@@ -1,0 +1,19 @@
+{
+  "name": "csvconverterformac",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/o1059de4649/CSVConverterForMac.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/o1059de4649/CSVConverterForMac/issues"
+  },
+  "homepage": "https://github.com/o1059de4649/CSVConverterForMac#readme"
+}
